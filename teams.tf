@@ -21,3 +21,12 @@ module "gcp-team" {
   workspace-tags = ["gcp", "sharedservices", "datalakes"]
   organization   = data.tfe_organization.teamcarljavier.name
 }
+
+
+module "app-service" {
+  source         = "./modules/teams"
+  teamname       = "app-service"
+  workspaces     = ["app-service-dev", "app-service-iam-profiles", "app-service-domain-names"]
+  workspace-tags = ["aws", "app-service"]
+  organization   = data.tfe_organization.teamcarljavier.name
+}
