@@ -61,20 +61,20 @@ module "aws-team" {
 The team submodule will create the following:
 
 - Two TFC teams
--- One for users
--- One for Pipeline
+  - One for users
+  - One for Pipeline
 - All the workspaces listed with workspace tags attached
--- Provide team access to the Users team with PLAN permissions to workspaces
--- AProvide team accessto the Pipeline team with APPLY permissions to workspaces
+  - Provide team access to the Users team with PLAN permissions to workspaces
+  - AProvide team accessto the Pipeline team with APPLY permissions to workspaces
 
 
 
 # To Do/Experiment
 
 - Can we add more settings under workspaces through this method?
--- eg. [Adding/sharing remote state](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace#remote_state_consumer_ids) to other consumer workspaces. Might be able to utilise [data.workspace_ids](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/workspace_ids)?
+  - eg. [Adding/sharing remote state](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace#remote_state_consumer_ids) to other consumer workspaces. Might be able to utilise [data.workspace_ids](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/workspace_ids)?
 - What settings are best kept in the UI?
--- eg. TF version of a workspace, let teams or TFC admins manage that per workspace in the UI. 
+  - eg. TF version of a workspace, let teams or TFC admins manage that per workspace in the UI. 
 - Integrate HCP Vault to retrive secrets
 - Setup Variable sets (maybe seperate state file/repo)
 - Could VCS Workflow also be provisioned with the current module setup?
