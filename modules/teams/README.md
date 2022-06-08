@@ -19,6 +19,7 @@ No modules.
 |------|------|
 | [tfe_team.pipeline](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/team) | resource |
 | [tfe_team.users](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/team) | resource |
+| [tfe_team_access.pipeline](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/team_access) | resource |
 | [tfe_team_access.users](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/team_access) | resource |
 | [tfe_workspace.workspaces](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |
 
