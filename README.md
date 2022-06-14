@@ -73,6 +73,7 @@ The team submodule will create the following:
 
 - Can we add more settings under workspaces through this method?
   - eg. [Adding/sharing remote state](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace#remote_state_consumer_ids) to other consumer workspaces. Might be able to utilise [data.workspace_ids](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/workspace_ids)?
+  - Another option is to use this [community module for workspaces](https://registry.terraform.io/modules/alexbasista/workspacer/) 
 - What settings are best kept in the UI?
   - eg. TF version of a workspace, let teams or TFC admins manage that per workspace in the UI. 
 - Integrate HCP Vault to retrive secrets
