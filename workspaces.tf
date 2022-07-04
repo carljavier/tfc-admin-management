@@ -27,10 +27,12 @@ module "teamappX-workspace" {
 
   terraform_version = "1.1.9"
 
-  team_access = {
-    "azure-sharedservices-users" = "plan"
-    "app-service-users"          = "read"
-  }
+  # Chicken and Egg issue here when setting this from the get go. 
+  # No dependency on Teams created so this module does not know if these teams actually exist or not.
+  # team_access = {
+  #   "azure-sharedservices-users" = "plan"
+  #   "app-service-users"          = "read"
+  # }
 
   tfvars = {
     teststring = "iamstring"
