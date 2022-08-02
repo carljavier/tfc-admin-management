@@ -17,7 +17,7 @@ resource "tfe_workspace" "appB" {
 # Seperating out your workspace creation makes sense as this way, you can add more workspace settings
 module "teamappX-workspace" {
   source  = "alexbasista/workspacer/tfe"
-  version = "0.2.0"
+  version = "0.3.0"
   # insert the 7 required variables here
 
   organization   = data.tfe_organization.teamcarljavier.name
@@ -25,7 +25,7 @@ module "teamappX-workspace" {
   workspace_desc = "Description of my new TFE Workspace."
   workspace_tags = ["experiment", "dev", "sharedservice"]
 
-  terraform_version = "1.1.9"
+  terraform_version = "1.2.6"
 
   # Chicken and Egg issue here when setting this from the get go. 
   # No dependency on Teams created so this module does not know if these teams actually exist or not.
