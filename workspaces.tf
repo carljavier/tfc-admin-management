@@ -40,4 +40,7 @@ module "teamappX-workspace" {
     testmap    = { "a" = "1", "b" = "2", "c" = "3" }
   }
 
+   variable_set_names = [
+    "aws-creds-demo"
+  ]
 }
