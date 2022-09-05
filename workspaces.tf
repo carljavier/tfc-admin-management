@@ -16,8 +16,8 @@ resource "tfe_workspace" "appB" {
 # Example using https://registry.terraform.io/modules/alexbasista/workspacer/tfe module
 # Seperating out your workspace creation makes sense as this way, you can add more workspace settings
 module "teamappX-workspace" {
-  source  = "git@github.com:alexbasista/terraform-tfe-workspacer.git?ref=f-variable-sets"
-  # version = "0.3.0"
+  source  = "alexbasista/workspacer/tfe"
+  version = "0.4.0"
   # insert the 7 required variables here
 
   organization   = data.tfe_organization.teamcarljavier.name
