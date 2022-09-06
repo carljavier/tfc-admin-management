@@ -12,6 +12,12 @@ resource "tfe_workspace" "appB" {
   tag_names    = ["test", "app"]
 }
 
+resource "tfe_workspace" "aws_dev" {
+  name         = "aws-infrastructure"
+  organization = data.tfe_organization.teamcarljavier.name
+  tag_names    = ["aws","test", "infra"]
+}
+
 
 # Example using https://registry.terraform.io/modules/alexbasista/workspacer/tfe module
 # Seperating out your workspace creation makes sense as this way, you can add more workspace settings
