@@ -15,6 +15,8 @@ resource "tfe_workspace" "appB" {
 resource "tfe_workspace" "aws_dev" {
   name         = "aws-infrastructure"
   organization = data.tfe_organization.teamcarljavier.name
+  execution_mode = "agent"
+  agent_pool_id = tfe_agent_pool.aws.id
   tag_names    = ["aws","test", "infra"]
 }
 
