@@ -20,6 +20,30 @@ resource "tfe_workspace" "aws_dev" {
   tag_names    = ["aws","test", "infra"]
 }
 
+resource "tfe_workspace" "aws_dev1" {
+  name         = "aws-infrastructure2"
+  organization = data.tfe_organization.teamcarljavier.name
+  execution_mode = "agent"
+  agent_pool_id = tfe_agent_pool.aws.id
+  tag_names    = ["aws","test", "infra"]
+}
+
+resource "tfe_workspace" "aws_dev0" {
+  name         = "app-magic2"
+  organization = data.tfe_organization.teamcarljavier.name
+  execution_mode = "agent"
+  agent_pool_id = tfe_agent_pool.aws.id
+  tag_names    = ["aws","test", "infra"]
+}
+
+resource "tfe_workspace" "aws_dev3" {
+  name         = "app-magic"
+  organization = data.tfe_organization.teamcarljavier.name
+  execution_mode = "agent"
+  agent_pool_id = tfe_agent_pool.aws.id
+  tag_names    = ["aws","test", "infra"]
+}
+
 
 # Example using https://registry.terraform.io/modules/alexbasista/workspacer/tfe module
 # Seperating out your workspace creation makes sense as this way, you can add more workspace settings
