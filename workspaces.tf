@@ -49,7 +49,7 @@ resource "tfe_workspace" "aws_dev3" {
 # Seperating out your workspace creation makes sense as this way, you can add more workspace settings
 module "teamappX-workspace" {
   source  = "alexbasista/workspacer/tfe"
-  version = "0.4.0"
+  version = "0.5.0"
   # insert the 7 required variables here
 
   organization   = data.tfe_organization.teamcarljavier.name
