@@ -40,7 +40,6 @@ E[Pipeline] -->|TF APPLY| B{{Terraform Cloud}}
 ```
 
 
-
 ## Adding more teams to TFC
 
 TFC Admins or other teams can self service by adding another module definition for a team.
@@ -63,10 +62,28 @@ The team submodule will create the following:
 - Two TFC teams
   - One for users
   - One for Pipeline
+- A TFC Project to group all the workspaces
+  - Assign both teams to the project as "admin"
 - All the workspaces listed with workspace tags attached
   - Provide team access to the Users team with PLAN permissions to workspaces
   - AProvide team accessto the Pipeline team with APPLY permissions to workspaces
 
+
+The following is how Organisations, Projects and Workspaces maps out:
+
+```mermaid
+graph TD
+    A[Organization] --> B[Project-AWS]
+    A[Organization] --> C[Project-AZURE]
+    A[Organization] --> D[Project-GCP]
+    B --> E[Workspace: aws-shared]
+    B --> F[Workspace: aws-frontend]
+    B --> G[Workspace: aws-backend]
+    C --> H[Workspace: azure-shared]
+    C --> I[Workspace: azure-frontend]
+    C --> J[Workspace: azure-backend]
+    C --> K[Workspace: GCP-backend]
+```
 
 
 # To Do/Experiment
