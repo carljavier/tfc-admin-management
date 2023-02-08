@@ -13,35 +13,35 @@ resource "tfe_workspace" "appB" {
 }
 
 resource "tfe_workspace" "aws_dev" {
-  name         = "aws-infrastructure"
-  organization = data.tfe_organization.teamcarljavier.name
+  name           = "aws-infrastructure"
+  organization   = data.tfe_organization.teamcarljavier.name
   execution_mode = "agent"
-  agent_pool_id = tfe_agent_pool.aws.id
-  tag_names    = ["aws","test", "infra"]
+  agent_pool_id  = tfe_agent_pool.aws.id
+  tag_names      = ["aws", "test", "infra"]
 }
 
 resource "tfe_workspace" "aws_dev1" {
-  name         = "aws-infrastructure2"
-  organization = data.tfe_organization.teamcarljavier.name
+  name           = "aws-infrastructure2"
+  organization   = data.tfe_organization.teamcarljavier.name
   execution_mode = "agent"
-  agent_pool_id = tfe_agent_pool.aws.id
-  tag_names    = ["aws","test", "infra"]
+  agent_pool_id  = tfe_agent_pool.aws.id
+  tag_names      = ["aws", "test", "infra"]
 }
 
 resource "tfe_workspace" "aws_dev0" {
-  name         = "app-magic2"
-  organization = data.tfe_organization.teamcarljavier.name
+  name           = "app-magic2"
+  organization   = data.tfe_organization.teamcarljavier.name
   execution_mode = "agent"
-  agent_pool_id = tfe_agent_pool.aws.id
-  tag_names    = ["aws","test", "infra"]
+  agent_pool_id  = tfe_agent_pool.aws.id
+  tag_names      = ["aws", "test", "infra"]
 }
 
 resource "tfe_workspace" "aws_dev3" {
-  name         = "app-magic"
-  organization = data.tfe_organization.teamcarljavier.name
+  name           = "app-magic"
+  organization   = data.tfe_organization.teamcarljavier.name
   execution_mode = "agent"
-  agent_pool_id = tfe_agent_pool.aws.id
-  tag_names    = ["aws","test", "infra"]
+  agent_pool_id  = tfe_agent_pool.aws.id
+  tag_names      = ["aws", "test", "infra"]
 }
 
 
@@ -72,7 +72,7 @@ module "teamappX-workspace" {
     testmap    = { "a" = "1", "b" = "2", "c" = "3" }
   }
 
-   variable_set_names = [
+  variable_set_names = [
     "aws-creds-demo"
   ]
 }

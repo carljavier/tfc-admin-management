@@ -3,6 +3,7 @@ resource "tfe_workspace" "workspaces" {
   name         = each.key
   organization = var.organization
   tag_names    = var.workspace-tags
+  project_id   = tfe_project.project.id
 }
 
 ## Any other settings to a workspace, could be set here or manully in the UI. If there are different 

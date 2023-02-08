@@ -16,3 +16,8 @@ variable "workspace-tags" {
 variable "organization" {
   default = "teamcarljavier"
 }
+
+variable "project" {
+  description = "Project Name"
+  type        = string
+}
