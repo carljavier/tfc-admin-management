@@ -1,5 +1,5 @@
 resource "tfe_project" "project" {
-  organization = var.organizationx
+  organization = var.organization
   name         = var.project
 }
 
