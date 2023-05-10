@@ -4,7 +4,7 @@
 module "aws-team" {
   source         = "./modules/teams"
   teamname       = "aws-sharedservices"
-  project        = "aws"
+  project        = "aws-svcs"
   workspaces     = ["aws-sharednetwork", "aws-iam-profiles", "aws-domain-names"]
   workspace-tags = ["aws", "sharedservices"]
   organization   = data.tfe_organization.teamcarljavier.name
@@ -13,7 +13,7 @@ module "aws-team" {
 module "azure-team" {
   source         = "./modules/teams"
   teamname       = "azure-sharedservices"
-  project        = "azure"
+  project        = "azure-svcs"
   workspaces     = ["azure-vnets", "azure-msi-profiles", "azure-resource-groups"]
   workspace-tags = ["azure", "sharedservices"]
   organization   = data.tfe_organization.teamcarljavier.name
@@ -22,7 +22,7 @@ module "azure-team" {
 module "gcp-team" {
   source         = "./modules/teams"
   teamname       = "gcp-sharedservices"
-  project        = "gcp"
+  project        = "gcp-svcs"
   workspaces     = ["gcp-sharednetwork", "gcp-iam-profiles", "gcp-projects"]
   workspace-tags = ["gcp", "sharedservices", "datalakes"]
   organization   = data.tfe_organization.teamcarljavier.name
@@ -32,7 +32,7 @@ module "gcp-team" {
 module "app-service" {
   source         = "./modules/teams"
   teamname       = "app-service"
-  project        = "apps"
+  project        = "app-svcs"
   workspaces     = ["app-service-dev", "app-service-iam-profiles", "app-service-domain-names"]
   workspace-tags = ["aws", "app-service"]
   organization   = data.tfe_organization.teamcarljavier.name

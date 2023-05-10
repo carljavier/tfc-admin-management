@@ -5,7 +5,12 @@ resource "tfe_variable_set" "tfc_admin" {
   organization = data.tfe_organization.teamcarljavier.name
 }
 
-resource "tfe_workspace_variable_set" "aws-infra" {
+# resource "tfe_workspace_variable_set" "aws-infra" {
+#   variable_set_id = tfe_variable_set.tfc_admin.id
+#   workspace_id    = tfe_workspace.aws_dev.id
+# }
+
+resource "tfe_workspace_variable_set" "tf-module-pet-test" {
   variable_set_id = tfe_variable_set.tfc_admin.id
-  workspace_id    = tfe_workspace.aws_dev.id
+  workspace_id    = tfe_workspace.tf-module-pet-test.id
 }
